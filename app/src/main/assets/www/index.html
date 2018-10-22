@@ -1,0 +1,23 @@
+<html>
+<head>
+</head>
+<body>
+<div id="log"></div>
+<div id="loc"></div>
+<div><input id="getCurrentPosition" type="button" value="get current position"></div>
+<script>
+    function successPosition(position) {
+        document.getElementById('loc').innerText = 'current : ' + position.coords.longitude + ' ' + position.coords.latitude;
+    }
+    function getCurrentPosition() {
+        navigator.geolocation.getCurrentPosition(successPosition);
+    }
+    document.getElementById('getCurrentPosition').addEventListener('click', getCurrentPosition)
+    if(navigator.geolocation) {
+        document.getElementById('log').innerText = 'has geolocation';
+    } else {
+        document.getElementById('log').innerText = 'no geolocation';
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Navigator Geolocation Sample</string>
+    <string name="action_settings">Settings</string>
+</resources>
